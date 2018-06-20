@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NJIJKPlayer_Example' do
+  pod 'NJIJKPlayer', :path => '../'
+
+  target 'NJIJKPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
