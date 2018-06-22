@@ -1,42 +1,66 @@
-#
-# Be sure to run `pod lib lint NJIJKPlayer.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+
 
 Pod::Spec.new do |s|
-  s.name             = 'NJIJKPlayer'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of NJIJKPlayer.'
+s.name             = 'NJIJKPlayer'
+s.version          = '1.0.1'
+s.summary          = 'NJIJKPlayer, NJIJKPlayer'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+s.description      = <<-DESC
+NJIJKPlayer, NJIJKPlayer, NJIJKPlayer, NJIJKPlayer, NJIJKPlayer, NJIJKPlayer, NJIJKPlayer
+DESC
 
-  s.homepage         = 'https://github.com/njhu/NJIJKPlayer'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'njhu' => '64hp@163.com' }
-  s.source           = { :git => 'https://github.com/njhu/NJIJKPlayer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+s.homepage         = 'https://github.com/njhu/NJIJKPlayer'
 
-  s.ios.deployment_target = '8.0'
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.author           = { 'njhu' => '64hp@163.com' }
+#s.source           = { :git => 'https://github.com/njhu/NJIJKPlayer.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/njhu/NJIJKPlayer.git', :branch =>'master' }
 
-  s.source_files = 'NJIJKPlayer/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'NJIJKPlayer' => ['NJIJKPlayer/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.ios.deployment_target = '10.3'
+
+# 调试开发打开注释
+#s.source_files = 'NJIJKPlayer/Classes/**/*'
+
+# 上线打开注释
+#二级目录
+
+#s.subspec 'Controller' do |ss|
+#    ss.source_files = 'NJIJKPlayer/Classes/Controller/*.{swift,xib}'
+#end
+#
+#s.subspec 'Model' do |ss|
+#    ss.source_files = 'NJIJKPlayer/Classes/Model/*.{swift}'
+#end
+#
+#s.subspec 'View' do |ss|
+#    ss.source_files = 'NJIJKPlayer/Classes/View/*.{swift,xib}'
+#end
+#
+#s.subspec 'ViewModel' do |ss|
+#    ss.source_files = 'NJIJKPlayer/Classes/ViewModel/*.{swift}'
+#end
+#
+#s.subspec 'Other' do |ss|
+#    ss.source_files = 'NJIJKPlayer/Classes/Other/*.{swift}'
+#end
+
+#二级目录
+
+#s.resource_bundles = {
+#'NJIJKPlayer' => ['NJIJKPlayer/Assets/**/*.{plist,webp,png}']
+#}
+
+#s.resources     = 'NJIJKPlayer/**/*.{xcassets}'
+
+#s.frameworks   = 'UIKit'
+#s.dependency 'NJKit'
+
+s.vendored_frameworks = 'IJKMediaFramework.framework'
+
+s.frameworks  = "AudioToolbox", "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "MobileCoreServices", "OpenGLES", "QuartzCore", "VideoToolbox", "Foundation", "UIKit", "MediaPlayer"
+s.libraries   = "bz2", "z", "stdc++"
+s.requires_arc = true
+
 end

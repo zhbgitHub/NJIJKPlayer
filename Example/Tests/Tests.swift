@@ -1,5 +1,5 @@
 import XCTest
-import NJIJKPlayer
+
 
 class Tests: XCTestCase {
     
